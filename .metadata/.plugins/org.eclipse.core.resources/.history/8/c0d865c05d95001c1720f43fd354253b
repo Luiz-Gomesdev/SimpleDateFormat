@@ -1,0 +1,46 @@
+package com.luiz.javaSimpleDateFormat;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+
+public class SimpleDateFormat {
+
+public SimpleDateFormat(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+public static void main(String[] args) {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss a z");
+		
+		Calendar data = new GregorianCalendar(2010, 5, 4, 14, 32, 25);
+		
+		System.out.println(sdf.format(data.getTime()));
+		
+		Date hoje = new Date();
+		
+		System.out.println(sdf.format(hoje));
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yyyy");
+		String minhaData = "20/02/2000";
+		
+		Date minhaDataEmDate = sdf1.parse(minhaData);
+		
+		System.out.println(minhaDataEmDate);
+		
+		System.out.println(sdf.format(minhaDataEmDate));
+
+	}
+
+private Date parse(String minhaData) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+private char[] format(Date hoje) {
+	// TODO Auto-generated method stub
+	return null;
+}
+}
